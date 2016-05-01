@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Builder","Allows to build a DNS packet"]]});
+initSidebarItems({"constant":[["OFFSET_FLAG",""]],"struct":[["Builder","Allows to build a DNS packet"]]});

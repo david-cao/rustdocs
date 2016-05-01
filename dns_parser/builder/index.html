@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,22 +44,28 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>dns_parser</a>::<wbr><a class='mod' href=''>builder</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-807' class='srclink' href='../../src/dns_parser/builder.rs.html#1-193' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-787' class='srclink' href='../../src/dns_parser/src/builder.rs.html#1-209' title='goto source code'>[src]</a></span></h1>
 <h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
-<table><tr><td><code>use std::prelude::<a class='mod' href='https://doc.rust-lang.org/nightly/std/prelude/v1/index.html' title='std::prelude::v1'>v1</a>::*;</code></td></tr><tr><td><code>use byteorder::{<a class='trait' href='http://burntsushi.net/rustdoc/byteorder/byteorder/trait.ByteOrder.html' title='byteorder::ByteOrder'>ByteOrder</a>, <a class='enum' href='http://burntsushi.net/rustdoc/byteorder/byteorder/enum.BigEndian.html' title='byteorder::BigEndian'>BigEndian</a>, <a class='trait' href='http://burntsushi.net/rustdoc/byteorder/byteorder/new/trait.WriteBytesExt.html' title='byteorder::new::WriteBytesExt'>WriteBytesExt</a>};</code></td></tr><tr><td><code>use ::{<a class='enum' href='../../dns_parser/enum.Opcode.html' title='dns_parser::Opcode'>Opcode</a>, <a class='enum' href='../../dns_parser/enum.ResponseCode.html' title='dns_parser::ResponseCode'>ResponseCode</a>, <a class='struct' href='../../dns_parser/struct.Header.html' title='dns_parser::Header'>Header</a>, <a class='enum' href='../../dns_parser/enum.QueryType.html' title='dns_parser::QueryType'>QueryType</a>, <a class='enum' href='../../dns_parser/enum.QueryClass.html' title='dns_parser::QueryClass'>QueryClass</a>, <a class='enum' href='../../dns_parser/enum.Type.html' title='dns_parser::Type'>Type</a>, <a class='enum' href='../../dns_parser/enum.Class.html' title='dns_parser::Class'>Class</a>};</code></td></tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table><tr><td><code>use std::prelude::v1::*;</code></td></tr><tr><td><code>use std::collections::<a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>;</code></td></tr><tr><td><code>use byteorder::{<a class='trait' href='http://burntsushi.net/rustdoc/byteorder/byteorder/trait.ByteOrder.html' title='byteorder::ByteOrder'>ByteOrder</a>, <a class='enum' href='http://burntsushi.net/rustdoc/byteorder/byteorder/enum.BigEndian.html' title='byteorder::BigEndian'>BigEndian</a>, <a class='trait' href='http://burntsushi.net/rustdoc/byteorder/byteorder/new/trait.WriteBytesExt.html' title='byteorder::new::WriteBytesExt'>WriteBytesExt</a>};</code></td></tr><tr><td><code>use ::{<a class='enum' href='../../dns_parser/enum.Opcode.html' title='dns_parser::Opcode'>Opcode</a>, <a class='enum' href='../../dns_parser/enum.ResponseCode.html' title='dns_parser::ResponseCode'>ResponseCode</a>, <a class='struct' href='../../dns_parser/struct.Header.html' title='dns_parser::Header'>Header</a>, <a class='enum' href='../../dns_parser/enum.QueryType.html' title='dns_parser::QueryType'>QueryType</a>, <a class='enum' href='../../dns_parser/enum.QueryClass.html' title='dns_parser::QueryClass'>QueryClass</a>, <a class='enum' href='../../dns_parser/enum.Type.html' title='dns_parser::Type'>Type</a>, <a class='enum' href='../../dns_parser/enum.Class.html' title='dns_parser::Class'>Class</a>};</code></td></tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.Builder.html'
-                               title='dns_parser::builder::Builder'>Builder</a></td>
-                        <td class='docblock short'>
-                             <p>Allows to build a DNS packet</p>
-
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Builder.html'
+                                  title='dns_parser::builder::Builder'>Builder</a></td>
+                           <td class='docblock short'>
+                                <p>Allows to build a DNS packet</p>
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.OFFSET_FLAG.html'
+                                  title='dns_parser::builder::OFFSET_FLAG'>OFFSET_FLAG</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -101,7 +108,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

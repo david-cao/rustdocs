@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,19 +44,21 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>dns_parser</a>::<wbr><a href='index.html'>builder</a>::<wbr><a class='struct' href=''>Builder</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-811' class='srclink' href='../../src/dns_parser/builder.rs.html#9-11' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-792' class='srclink' href='../../src/dns_parser/src/builder.rs.html#11-14' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Builder {
     buf: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;,
+    labels: <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>&gt;,
 }</pre><div class='docblock'><p>Allows to build a DNS packet</p>
 
 <p>Both query and answer packets may be built with this interface, although,
 much of functionality is not implemented yet.</p>
 </div><h2 class='fields'>Fields</h2>
 <table><tr class='stab '>
-                                  <td id='structfield.buf'><code>buf</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../dns_parser/struct.Builder.html' title='dns_parser::Builder'>Builder</a></code></h3><div class='impl-items'><h4 id='method.new_query' class='method'><code>fn <a href='#method.new_query' class='fnname'>new_query</a>(id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>, recursion: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='struct' href='../../dns_parser/struct.Builder.html' title='dns_parser::Builder'>Builder</a></code></h4>
+                             <td id='structfield.buf'><code>buf</code></td><td></td></tr><tr class='stab '>
+                             <td id='structfield.labels'><code>labels</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../dns_parser/struct.Builder.html' title='dns_parser::Builder'>Builder</a></code></h3><div class='impl-items'><h4 id='method.new_query' class='method'><code>fn <a href='#method.new_query' class='fnname'>new_query</a>(id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>, recursion: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='struct' href='../../dns_parser/struct.Builder.html' title='dns_parser::Builder'>Builder</a></code></h4>
 <div class='docblock'><p>Creates a new query</p>
 
 <p>Initially all sections are empty. You&#39;re expected to fill
@@ -75,14 +78,14 @@ your answers.</p>
 <li>There are already 65535 questions in the buffer.</li>
 <li>When name is invalid</li>
 </ul>
-</div><h4 id='method.add_answer' class='method'><code>fn <a href='#method.add_answer' class='fnname'>add_answer</a>(&amp;mut self, aname: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, atype: <a class='enum' href='../../dns_parser/enum.Type.html' title='dns_parser::Type'>Type</a>, aclass: <a class='enum' href='../../dns_parser/enum.Class.html' title='dns_parser::Class'>Class</a>, ttl: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; &amp;mut <a class='struct' href='../../dns_parser/struct.Builder.html' title='dns_parser::Builder'>Builder</a></code></h4>
+</div><h4 id='method.add_answer' class='method'><code>fn <a href='#method.add_answer' class='fnname'>add_answer</a>(&amp;mut self, aname: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, atype: <a class='enum' href='../../dns_parser/enum.Type.html' title='dns_parser::Type'>Type</a>, aclass: <a class='enum' href='../../dns_parser/enum.Class.html' title='dns_parser::Class'>Class</a>, ttl: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, data: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;) -&gt; &amp;mut <a class='struct' href='../../dns_parser/struct.Builder.html' title='dns_parser::Builder'>Builder</a></code></h4>
 <div class='docblock'><p>Adds an answer to the packet</p>
 
 <p>NOTE: You need to add all you questions first before adding answers.</p>
 
 <h1 id='panics-1' class='section-header'><a href='#panics-1'>Panics</a></h1>
 <ul>
-<li>There are already 65535 answers in the buffer.</li>
+<li>There are too many answers in the buffer.</li>
 <li>When name is invalid</li>
 </ul>
 </div><h4 id='method.write_name' class='method'><code>fn <a href='#method.write_name' class='fnname'>write_name</a>(&amp;mut self, name: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>)</code></h4>
@@ -142,7 +145,7 @@ appropriate.</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

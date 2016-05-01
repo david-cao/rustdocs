@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,12 +44,12 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>dns_parser</a>::<wbr><a class='mod' href=''>parser</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-444' class='srclink' href='../../src/dns_parser/parser.rs.html#1-497' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-424' class='srclink' href='../../src/dns_parser/src/parser.rs.html#1-497' title='goto source code'>[src]</a></span></h1>
 <h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
-<table><tr><td><code>use std::prelude::<a class='mod' href='https://doc.rust-lang.org/nightly/std/prelude/v1/index.html' title='std::prelude::v1'>v1</a>::*;</code></td></tr><tr><td><code>use std::<a class='mod' href='https://doc.rust-lang.org/nightly/core/i32/index.html' title='core::i32'>i32</a>;</code></td></tr><tr><td><code>use byteorder::{<a class='trait' href='http://burntsushi.net/rustdoc/byteorder/byteorder/trait.ByteOrder.html' title='byteorder::ByteOrder'>ByteOrder</a>, <a class='enum' href='http://burntsushi.net/rustdoc/byteorder/byteorder/enum.BigEndian.html' title='byteorder::BigEndian'>BigEndian</a>, <a class='trait' href='http://burntsushi.net/rustdoc/byteorder/byteorder/new/trait.WriteBytesExt.html' title='byteorder::new::WriteBytesExt'>WriteBytesExt</a>};</code></td></tr><tr><td><code>use ::{<a class='struct' href='../../dns_parser/struct.Header.html' title='dns_parser::Header'>Header</a>, <a class='struct' href='../../dns_parser/struct.Packet.html' title='dns_parser::Packet'>Packet</a>, <a class='enum' href='../../dns_parser/enum.Error.html' title='dns_parser::Error'>Error</a>, <a class='struct' href='../../dns_parser/struct.Question.html' title='dns_parser::Question'>Question</a>, <a class='struct' href='../../dns_parser/struct.Name.html' title='dns_parser::Name'>Name</a>, <a class='enum' href='../../dns_parser/enum.QueryType.html' title='dns_parser::QueryType'>QueryType</a>, <a class='enum' href='../../dns_parser/enum.QueryClass.html' title='dns_parser::QueryClass'>QueryClass</a>};</code></td></tr><tr><td><code>use ::{<a class='enum' href='../../dns_parser/enum.Type.html' title='dns_parser::Type'>Type</a>, <a class='enum' href='../../dns_parser/enum.Class.html' title='dns_parser::Class'>Class</a>, <a class='struct' href='../../dns_parser/struct.ResourceRecord.html' title='dns_parser::ResourceRecord'>ResourceRecord</a>, <a class='enum' href='../../dns_parser/enum.RRData.html' title='dns_parser::RRData'>RRData</a>};</code></td></tr></table></section>
+<table><tr><td><code>use std::prelude::v1::*;</code></td></tr><tr><td><code>use std::<a class='mod' href='https://doc.rust-lang.org/nightly/core/i32/index.html' title='core::i32'>i32</a>;</code></td></tr><tr><td><code>use byteorder::{<a class='trait' href='http://burntsushi.net/rustdoc/byteorder/byteorder/trait.ByteOrder.html' title='byteorder::ByteOrder'>ByteOrder</a>, <a class='enum' href='http://burntsushi.net/rustdoc/byteorder/byteorder/enum.BigEndian.html' title='byteorder::BigEndian'>BigEndian</a>, <a class='trait' href='http://burntsushi.net/rustdoc/byteorder/byteorder/new/trait.WriteBytesExt.html' title='byteorder::new::WriteBytesExt'>WriteBytesExt</a>};</code></td></tr><tr><td><code>use ::{<a class='struct' href='../../dns_parser/struct.Header.html' title='dns_parser::Header'>Header</a>, <a class='struct' href='../../dns_parser/struct.Packet.html' title='dns_parser::Packet'>Packet</a>, <a class='enum' href='../../dns_parser/enum.Error.html' title='dns_parser::Error'>Error</a>, <a class='struct' href='../../dns_parser/struct.Question.html' title='dns_parser::Question'>Question</a>, <a class='struct' href='../../dns_parser/struct.Name.html' title='dns_parser::Name'>Name</a>, <a class='enum' href='../../dns_parser/enum.QueryType.html' title='dns_parser::QueryType'>QueryType</a>, <a class='enum' href='../../dns_parser/enum.QueryClass.html' title='dns_parser::QueryClass'>QueryClass</a>};</code></td></tr><tr><td><code>use ::{<a class='enum' href='../../dns_parser/enum.Type.html' title='dns_parser::Type'>Type</a>, <a class='enum' href='../../dns_parser/enum.Class.html' title='dns_parser::Class'>Class</a>, <a class='struct' href='../../dns_parser/struct.ResourceRecord.html' title='dns_parser::ResourceRecord'>ResourceRecord</a>, <a class='enum' href='../../dns_parser/enum.RRData.html' title='dns_parser::RRData'>RRData</a>};</code></td></tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -91,7 +92,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
